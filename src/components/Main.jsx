@@ -61,18 +61,17 @@ export default function Main() {
             </ul>
             <form onSubmit={handleAddMovie}>
                 <div className="mb-3">
-                    <label htmlFor="" className="form-label">Name</label>
+                    <label htmlFor="new_movie" className="form-label"></label>
                     <input
                         type="text"
                         className="form-control"
-                        name=""
-                        id=""
+                        name="new_movie"
+                        id="new_movie"
                         aria-describedby="helpId"
                         placeholder="Add a new movie..."
                         value={newMovie}
                         onChange={(e) => setNewMovie(e.target.value)}
                     />
-                    <small id="helpId" className="form-text text-muted">Help text</small>
                 </div>
                 <button type="submit" className='btn btn-primary my-3'>Send</button>
 
