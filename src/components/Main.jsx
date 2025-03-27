@@ -4,7 +4,7 @@ import Movies from "../data/movieslist"
 export default function Main() {
     const [movies, setMovies] = useState(Movies)
     const [newMovie, setNewMovie] = useState('')
-    const [filteredMovie, setFilteredMovie] = useState(Movies)
+    const [filteredMovie, setFilteredMovie] = useState(movies)
     const [selectedGenre, setSelectedGenre] = useState('')
     const [selectedTitle, setSelectedTitle] = useState('')
 
@@ -21,7 +21,8 @@ export default function Main() {
         if (newMovie === '') {
             alert('Devi inserire un film')
         }
-        console.log(setNewMovie(...movies))
+        setMovies([{ title: newMovie, genre: 'default' }, ...movies])
+
 
         setNewMovie('')
     }
@@ -73,10 +74,10 @@ export default function Main() {
                     />
                     <small id="helpId" className="form-text text-muted">Help text</small>
                 </div>
+                <button type="submit" className='btn btn-primary my-3'>Send</button>
 
             </form>
 
-            <button onClick={handleAddMovie} type="submit" className='btn btn-primary my-3'>Send</button>
         </div>
 
     )
