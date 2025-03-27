@@ -9,7 +9,6 @@ export default function Main() {
     const [selectedTitle, setSelectedTitle] = useState('')
 
     useEffect(() => {
-        console.log('Hello World');
         setFilteredMovie(movies.filter(movie => movie.genre.toLowerCase().includes(selectedGenre.toLowerCase())))
     }, [movies, selectedGenre]);
 
