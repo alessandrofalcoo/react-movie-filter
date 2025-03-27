@@ -1,5 +1,5 @@
 export default function Header() {
     return (
-        <h1>Movie's List</h1>
+        <h1 className="my-3">Movie's List</h1>
     )
 }
